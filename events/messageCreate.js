@@ -5,7 +5,9 @@ module.exports = {
 		if (message.author.bot) return;
 		const messageMember = message.guild.members.cache.find((user) => user.id === message.author.id);
 		let messageMemberNick = messageMember.nickname;
-		if (messageMemberNick === null) messageMemberNick = message.author.username;
+		if (messageMemberNick === null) {
+			messageMemberNick = message.author.username;
+		}
 		if (
 			//  日文觸發詞
 			message.content === 'サラおはよう' ||
