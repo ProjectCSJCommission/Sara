@@ -2,7 +2,8 @@ module.exports = {
 	name: 'messageCreate',
 	once: false,
 	async execute(message) {
-		const usernick = message.guild.members.cache.find(user => user.tag === message.author.tag).displayName;
+		const messageuser = message.guild.members.cache.find(user => user.tag === message.author.tag);
+		const usernick = messageuser.displayName;
 		if (message.author.bot) return;
 		if (
 			//  日文觸發詞
