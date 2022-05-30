@@ -22,7 +22,7 @@ module.exports = {
 				'おはよう～♪',
 				'早安呀～♪',
 			];
-			message.reply(
+			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
@@ -46,7 +46,7 @@ module.exports = {
 				'おやすみ～♪',
 				'晚安呀～♪',
 			];
-			message.reply(
+			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
@@ -64,7 +64,7 @@ module.exports = {
 				'不要',
 				'再說',
 			];
-			message.reply(
+			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
