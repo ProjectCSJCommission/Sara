@@ -3,6 +3,8 @@ module.exports = {
 	once: false,
 	async execute(message) {
 		if (message.author.bot) return;
+		const messageMember = message.guild.members.cache.find((user) => user.id === message.author.id);
+		console.log(messageMember);
 		if (
 			//  日文觸發詞
 			message.content === 'サラおはよう' ||
