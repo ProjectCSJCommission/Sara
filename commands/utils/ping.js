@@ -11,14 +11,14 @@ module.exports = {
 			.setColor('RANDOM')
 			.setAuthor({
 				name: interaction.guild.me.displayName,
-				iconURL: interaction.guild.me.avatarURL({dynamic:true}),
+				iconURL: interaction.client.user.avatarURL({ dynamic: true }),
 				url: process.env.SiteURL,
 			})
 			.setTitle('Pong!')
 			.setDescription(`延遲${Math.abs(Date.now() - interaction.createdTimestamp)}ms.`)
 			.setFooter({
 				text: process.env.COPYRIGHT,
-				iconURL:interaction.guild.me.avatarURL({dynamic:true}),
+				iconURL:interaction.client.user.avatarURL({ dynamic: true }),
 			});
 		await interaction.reply({
 			embeds: [ping],
