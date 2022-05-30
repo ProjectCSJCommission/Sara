@@ -27,7 +27,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: messageMemberNick + RandomMorning[Math.floor(Math.random() * RandomMorning.length)],
 					ephemeral: false,
 				},
 			);
@@ -51,7 +51,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: messageMemberNick + RandomMorning[Math.floor(Math.random() * RandomMorning.length)],
 					ephemeral: false,
 				},
 			);
@@ -69,7 +69,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: RandomMorning[Math.floor(Math.random() * RandomMorning.length)],
 					ephemeral: false,
 				});
 		}
