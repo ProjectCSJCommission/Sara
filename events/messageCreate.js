@@ -7,7 +7,7 @@ module.exports = {
 		(
 			message.content === 'サラおはよう' ||
 			//message.content === '祭おはよう' ||
-			message.content === 'サラ早安' ||
+			message.content === 'サラ早安' //||
 			//message.content === '祭早安'
 		) {
 			const RandomMorning =
@@ -26,7 +26,7 @@ module.exports = {
 		if (
 			message.content === 'サラおやすみ' ||
 			//message.content === '祭おやすみ' ||
-			message.content === 'サラ晚安' ||
+			message.content === 'サラ晚安' //||
 			//message.content === '祭晚安'
 		) {
 			const RandomMorning =
