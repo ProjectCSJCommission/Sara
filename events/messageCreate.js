@@ -2,6 +2,7 @@ module.exports = {
 	name: 'messageCreate',
 	once: false,
 	async execute(message) {
+		const usernick = message.guild.members.cache.find(user => user.tag === message.author.tag).displayName;
 		if (message.author.bot) return;
 		if (
 			//  日文觸發詞
@@ -22,7 +23,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${message.author.displayName}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${usernick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
@@ -46,7 +47,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${message.author.displayName}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${usernick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
