@@ -4,7 +4,8 @@ module.exports = {
 	async execute(message) {
 		if (message.author.bot) return;
 		const messageMember = message.guild.members.cache.find((user) => user.id === message.author.id);
-		console.log(messageMember);
+		let messageMemberNick = messageMember.nickname;
+		if (messageMemberNick === null) messageMemberNick = message.author.username;
 		if (
 			//  日文觸發詞
 			message.content === 'サラおはよう' ||
@@ -24,7 +25,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${message.author.username}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
@@ -48,7 +49,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${message.author.username}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
