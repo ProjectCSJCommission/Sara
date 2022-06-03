@@ -19,7 +19,7 @@ module.exports = {
 		logger.debug(date);
 		client.user.setPresence({
 			activities: [{
-				name: 'IDK',
+				name: '夢追翔',
 				type: 'PLAYING',
 			}],
 			status: 'online',
