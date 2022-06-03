@@ -34,6 +34,30 @@ module.exports = {
 		}
 		if (
 			//  日文觸發詞
+			message.content === 'サラこんにちは' ||
+			message.content === 'こんにちは' ||
+			// 中文觸發詞
+			message.content === '星川午安' ||
+			message.content === '午安' ||
+			// 中日混和觸發詞
+			message.content === '星川こんにちは' ||
+			message.content === 'サラ午安'
+		) {
+			const RandomMessage =
+			[
+				'こんにちは～♪',
+				'午安呀～♪',
+			];
+			return message.reply(
+				{
+					allowedMentions: { repliedUser: false },
+					content: /* messageMemberNick + */ RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
+					ephemeral: false,
+				},
+			);
+		}
+		if (
+			//  日文觸發詞
 			message.content === 'サラおやすみ' ||
 			message.content === 'おやすみ' ||
 			// 中文觸發詞
