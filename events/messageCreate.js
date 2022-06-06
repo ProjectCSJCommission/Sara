@@ -81,8 +81,9 @@ module.exports = {
 			);
 		}
 		if (
-			message.content.match('起來嗨') != null ||
-            message.content.match('嗨起來') != null
+			message.content.match('起') != null &&
+			message.content.match('來') != null &&
+            message.content.match('嗨') != null
 		) {
 			const RandomMorning =
 				[
